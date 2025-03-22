@@ -1,15 +1,15 @@
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const [mainCategories, setMainCategories] = useState([]);
     const [childCategories, setChildCategories] = useState([]);
 
-
-
     useEffect(() => {
         const fetchMainCategories = async () => {
             try {
                 const response = await fetch('https://ecomm.dotvik.com/v2kart/service/categories/mainCategories');
+                // const response = await axios.post('http://192.168.56.1:5500/api/user/get_triplink');
                 const data = await response.json();
                 console.log(data.data);
                 setMainCategories(data.data);
@@ -51,44 +51,13 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container-fluid px-4 " style={{"background-color":"#e3f2fd"}}>
+            <div className="container-fluid px-4 " style={{ "background-color": "#e3f2fd" }}>
                 <div className="row">
-                <div className="col-lg-2"></div>
+                    <div className="col-lg-2"></div>
                     <div className="col-lg-8">
 
                         <nav>
-                            {/* 
-                            Main Categories Dropdown
-                            <div className="dropdown">
-                                <button className="dropbtn">Main Categories</button>
-                                <div className="dropdown-content">
-                                    {mainCategories.map((category) => (
-                                        <a key={category.id} href={category.url}>
-                                            {category.categoryName}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-
-                            Child Categories Dropdown
-                            <div className="dropdown">
-                                <button className="dropbtn">Child Categories</button>
-                                <div className="dropdown-content">
-                                    {childCategories.map((subcategory) => (
-                                        <a key={subcategory.id} href={subcategory.url}>
-                                            {subcategory.categoryName}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div> */}
-
-
-
-
-                        </nav>
-
-
-                        <nav className="navbar navbar-expand-lg navbar-light fw-bold">
+                        </nav>                        <nav className="navbar navbar-expand-lg navbar-light fw-bold">
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav mr-auto">
                                     {mainCategories.map((category) => (
@@ -102,10 +71,10 @@ const Navbar = () => {
                                                         {subcategory.categoryName}
                                                     </a>
                                                 ))}
-                                                
+
                                             </div>
                                         </li>
-                                    ))}                                  
+                                    ))}
                                 </ul>
 
                             </div>
@@ -113,7 +82,7 @@ const Navbar = () => {
 
 
                     </div>
-                <div className="col-lg-2"></div>
+                    <div className="col-lg-2"></div>
 
                 </div>
             </div>
