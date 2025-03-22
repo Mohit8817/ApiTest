@@ -38,8 +38,16 @@ const Task = () => {
 
 
             <div className="container mt-5 m-auto justify-content-center">
+
+
                 <div className="row m-auto">
-                    <div className="col">
+                    <h3 className="text-center">
+
+                        Matrix Task
+                    </h3>
+                    <div className="col-lg-3"></div>
+                    <div className="col-lg-6">
+
                         <div style={{ display: "grid", gridTemplateColumns: `repeat(${gridSize}, 100px)`, gap: "10px" }}>
                             {boxColors.map((color, index) => (
                                 <div
@@ -59,6 +67,7 @@ const Task = () => {
                             ))}
                         </div>
                     </div>
+                    <div className="col-lg-3"></div>
                 </div>
             </div>
 
