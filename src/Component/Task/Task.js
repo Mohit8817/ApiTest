@@ -37,7 +37,7 @@ const Task = () => {
         <div>
 
 
-            <div className="container mt-5 m-auto">
+            <div className="container mt-5 m-auto justify-content-center">
                 <div className="row m-auto">
                     <div className="col">
                         <div style={{ display: "grid", gridTemplateColumns: `repeat(${gridSize}, 100px)`, gap: "10px" }}>
